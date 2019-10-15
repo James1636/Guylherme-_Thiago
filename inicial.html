@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- materialize.css -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- CSS Customizado -->
+    <link rel="stylesheet" href="css/customizado.css">
+      
+    <!-- viewport para mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      .titulo {
+        color: black;
+        margin-right: 10%;
+        margin-left: 10%;
+      }
+      .corpo {
+        color: black;
+        margin-right: 10%;
+        margin-left: 10%;
+      }
+
+    </style>
+  </head>
+
+  <body>
+  <nav class="blue">
+        <div class="nav-wrapper">
+            <a href="inicial.html" class="brand-logo">  Weight Loss Clinic</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="inicial.html">Inicial</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="imagens.html">Imagens</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h1 class="titulo">Bem vindo!</h1>
+    <h4 class="corpo">Aqui na Weight Loss Clinic você conseguirá alcançar o resultado que espera,
+      de uma maneira saudável e em conta.
+    </h4>
+    <h1 class="titulo">Eficiencia</h1>
+    <h4 class="corpo">Todos os nossos profissionais são completamente qualificados</h4> 
+    <div class="parallax-container">
+        <div class="parallax"><img src="imagens/picture 9.jpg"></div>
+    </div>
+    <h1 class="titulo">Resultados comprovados</h1> 
+    <h4 class="corpo">Temos inúmeros cliente satisfeitos com nossos serviços</h4>
+    <div class="slider container">
+        <ul class="slides">
+            <li>
+                <img src="imagens/oterceiro - Copia.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Depoimentos </h3>
+                    <h5 class="light grey-text text-lighten-3">Veja o que nossos clientes tem a dizer!</h5>
+                </div>
+            </li>
+            <li>
+                <img src="imagens/picture 3 - Copia.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Galeria</h3>
+                    <h5 class="light white-text text-lighten-3">Veja a nossa galeria</h5>
+                </div>
+            </li>
+            <li>
+                <img src="imagens/picture 9.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>Serviços</h3>
+                    <h5 class="light grey-text text-lighten-3">Veja o que podemos oferecer para você</h5>
+                </div>
+            </li>
+            <li>
+                <img src="imagens/imc-calculo.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    <h3>IMC</h3>
+                    <h5 class="light black-text text-lighten-3">Calcule seu Índice de Massa Corpórea</h5>
+                </div>
+            </li>
+        </ul>
+    </div>  
+    <h1 class="titulo">Agende já</h1>
+    <h4 class="corpo">Ligue para nós ou mande um zap, estamos sempre a disposição!</h4>
+
+    <!-- JavaScript no final do body para otimizar o carregamento -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>      
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    
+    <script>
+      $(document).ready(function(){
+        $('.parallax').parallax();
+        });
+
+        $(document).ready(function(){
+          $('.slider').slider();
+          });
+    </script>
+
+
+  </body>
+
+
+</html>

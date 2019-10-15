@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Document</title>
+
+      <!-- Google Icon Font -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!-- materialize.css -->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!-- CSS Customizado -->
+      <link rel="stylesheet" href="css/customizado.css">
+      
+      <!-- viewport para mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <style>
+      .descri {
+          color: gray;
+          text-align: center;
+      }
+      </style>
+  </head>
+
+  <body>
+    <nav class="blue">
+        <div class="nav-wrapper">
+            <a href="inicial.html" class="brand-logo">  Weight Loss Clinic</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="inicial.html">Inicial</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="imagens.html">Imagens</a></li>
+                <li><a href="depoimentos.html">Depoimentos</a></li>
+                <li><a href="imc.html">IMC</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <h3 class="descri">Aqui você pode calcular seu IMC:</h3>
+    <br>
+    <form action="" name="iemece" class="container" onsubmit="calcular();return false;">
+
+            
+        <div class="input-field col s12 l6">  
+            <input type="number" name="p" id="peso">
+            <label for="peso">Insira seu peso (em gramas)</label>
+        </div>
+
+        <div class="input-field col s12 l6">
+              <input type="number" name="a" id="altura" class="">
+              <label for="altura">Insira sua altura (em centimetros)</label>
+        </div>
+            <br>
+            <button class="btn waves-effect waves-light blue" type="submit" name="action" value="Calc">Calcular </button>
+            <h3 id="resultado">Resultado: </h3>
+        </form>
+          
+      <!-- JavaScript no final do body para otimizar o carregamento -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js">
+      </script>      
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+            function calcular() {
+                var p = new Number(document.iemece.p.value);
+                var a = new Number(document.iemece.a.value);
+                var p = p / 1000;
+                var a = a / 100;
+                var r = p / (a * a);
+                console.log(r);
+                var dia = ""
+                if (r <= 18.5) {
+                    var dia = " Classificação: Magreza"
+                }
+                if (r > 18.5 || r <= 24.9) {
+                    var dia = " Classificação: Normal"
+                }
+                if (r > 24.9 || r <= 29.9) {
+                    var dia = " Classificação: Sobrepeso"
+                }
+                if (r > 30 || r <= 39.9) {
+                    var dia = " Classificação: Obesidade"
+                }
+                if (r >= 40) {
+                    var dia = " Classificação: Obesidade grave"
+                }
+                
+                document.getElementById("resultado").innerHTML = "Resultado: " + r + dia
+            }
+      </script>
+  </body>
+
+
+</html>
